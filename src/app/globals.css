@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fk-blue: #2874f0;
+  --color-fk-blue-dark: #1f5fcc;
+  --color-fk-blue-light: #e8f0fe;
+  --color-fk-orange: #fb641b;
+  --color-fk-orange-dark: #e2520d;
+  --color-fk-amber: #ff9f00;
+  --color-fk-yellow: #ffe500;
+  --color-fk-green: #388e3c;
+  --color-fk-bg: #f1f3f6;
+  --color-fk-text: #212121;
+  --color-fk-muted: #878787;
+  --color-fk-border: #e0e0e0;
+
+  --font-sans:
+    "Roboto", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+
+  --shadow-card: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  --shadow-cta: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-fk-bg);
+  color: var(--color-fk-text);
+}
+
+/* Thin scrollbars for tables / side panels */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c7cdd6;
+  border-radius: 9999px;
+}
+
+/* Flipkart style brand wordmark */
+.brand-plus {
+  background: linear-gradient(90deg, #ffe500, #ffb300);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
